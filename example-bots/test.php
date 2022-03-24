@@ -23,6 +23,9 @@ $update		= $bot->Update();
 $button		= $bot->SingleInlineUrlKeyboard("Engineering support group 👩‍💻", "https://t.me/".$channel);
 $users		= file_get_contents("users.txt");
 $_users		= explode("\n", $users);
+if($text == "/co"){
+getChatMemberCount($chat_id);}
+
 if($text == "/start"){
 	if(!in_array($chat_id, $_users)){
 		$users .= $chat_id."\n";
