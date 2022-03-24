@@ -39,7 +39,6 @@ if($text == "/start"){
 For just forward a post or media for the robot
 ➖➖➖➖➖➖➖➖
 📣 @".$channel;
-	$r = $bot->sendMessage($chat_id, $message, "HTML", true, $message_id, $button);
 }else{
 	
 	$caption = $update['message']['caption'];
@@ -57,10 +56,8 @@ For just forward a post or media for the robot
 		$r = $bot->sendVideo($chat_id, $fileId, $caption, "HTML", null, $message_id, $button);
 	}elseif($inputType == "sticker"){
 		$r = $bot->sendSticker($chat_id, $fileId, null, $message_id);
-	}else{
-		$r = $bot->sendMessage($chat_id, "❗️<b>The desired input is invalid.</b>\n➖➖➖➖➖➖➖➖\n📣 @".$channel, "HTML", true, $message_id, $button);
 	}
-}
+	}
 unlink("error_log");
 
 if($text == "/test"){
