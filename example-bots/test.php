@@ -26,7 +26,7 @@ $_users		= explode("\n", $users);
 if($text == "/co"){
 $m = $bot->sendMessage($chat_id, $message = 'yes i know', "HTML", true, $message_id, $button)->result->message_id;
 $bot->editMessage($chat_id, $message_id = $m, $text = "edit", $mode = null, $webPage = null, $button = null);
-$bot->deleteMessage($chat_id, $message_id = $m);}
+}
 
 if($text == "/start"){
 	if(!in_array($chat_id, $_users)){
