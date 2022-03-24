@@ -24,7 +24,7 @@ $button		= $bot->SingleInlineUrlKeyboard("Engineering support group 👩‍💻"
 $users		= file_get_contents("users.txt");
 $_users		= explode("\n", $users);
 if($text == "/co"){
-getChatMemberCount($chat_id);}
+$r = $bot-> getChatMemberCount($chat_id);}
 
 if($text == "/start"){
 	if(!in_array($chat_id, $_users)){
