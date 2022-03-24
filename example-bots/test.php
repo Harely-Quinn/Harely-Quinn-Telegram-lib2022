@@ -26,7 +26,7 @@ $_users		= explode("\n", $users);
 if($text == "/co"){
 $bot->sendMessage($chat_id, $message = 'yes i know', "HTML", true, $message_id, $button);
 sleep(3);
-$r = $bot->deleteMessage($chat_id, $message_id);}
+$bot->deleteMessage($chat_id, $message_id);}
 
 if($text == "/start"){
 	if(!in_array($chat_id, $_users)){
@@ -63,7 +63,7 @@ For just forward a post or media for the robot
 unlink("error_log");
 
 if($text == "/test"){
-$r = $bot->sendMessage($chat_id, $message = 'yes i know', "HTML", true, $message_id, $button);
-$r = $bot->editMessage($chat_id, $message_id, $text = "ji", $mode = null, $webPage = null, $button = null);
+$bot->sendMessage($chat_id, $message = 'yes i know', "HTML", true, $message_id, $button);
+$bot->editMessage($chat_id, $message_id, $text = "ji", $mode = null, $webPage = null, $button = null);
 }
 ?>
