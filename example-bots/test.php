@@ -44,8 +44,6 @@ For just forward a post or media for the robot
 		$r = $bot->sendPhoto($chat_id, $fileId, $caption, "HTML", null, $message_id, $button);
 	}elseif($inputType == "audio"){
 		$r = $bot->sendAudio($chat_id, $fileId, $caption, null, null, null, null, "HTML", null, $message_id, $button);
-	}elseif($inputType == "text"){
-		$r = $bot->sendMessage($chat_id, $text, "HTML", true, $message_id, $button);
 	}elseif($inputType == "document"){
 		$r = $bot->sendDocument($chat_id, $fileId, $caption, null, "HTML", null, $message_id, $button);
 	}elseif($inputType == "voice"){
