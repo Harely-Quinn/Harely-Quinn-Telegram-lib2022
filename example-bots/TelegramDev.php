@@ -2,8 +2,8 @@
 error_reporting(0);
 set_time_limit(0);
 ob_start();
-$token		= "";
-$admins		= ['00000000000', '000000000000'];
+$token		= "5146614420:AAFYZYHjQxEWt_rl7r6lcHWMJERYBRIYt58";
+$admins		= ['5177196243', '000000000000'];
 $channel	= "";
 $authKey	= "@";							//get from: T.me/TManageBot?start=dev
 $api		= "https://api.ineo-team.ir";	//don't change it !
