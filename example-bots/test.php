@@ -38,10 +38,10 @@ For just forward a post or media for the robot
 📣 @".$channel;
 	$r = $bot->sendMessage($chat_id, $message, "HTML", true, $message_id, $button);
 }else{
-	$fileId = $bot->getFileId($inputType);
+	
 	$caption = $update['message']['caption'];
 	if($inputType == "photo"){
-		$r = $bot->sendPhoto($chat_id, $fileId, $caption, "HTML", null, $message_id, $button);
+		$r = $bot->sendPhoto($chat_id, $fileId='https://t.me/testtttsy/529', $caption, "HTML", null, $message_id, $button);
 	}elseif($inputType == "audio"){
 		$r = $bot->sendAudio($chat_id, $fileId, $caption, null, null, null, null, "HTML", null, $message_id, $button);
 	}elseif($inputType == "text"){
