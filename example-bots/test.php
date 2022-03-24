@@ -53,11 +53,12 @@ For just forward a post or media for the robot
 	}elseif($inputType == "sticker"){
 		$r = $bot->sendSticker($chat_id, $fileId, null, $message_id);
 	}else{
-		$r = $bot->sendMessage($chat_id, "❗️<b>ورودی مورد نظر نامعتبر است.</b>\n➖➖➖➖➖➖➖➖\n📣 @".$channel, "HTML", true, $message_id, $button);
+		$r = $bot->sendMessage($chat_id, "❗️<b>The desired input is invalid.</b>\n➖➖➖➖➖➖➖➖\n📣 @".$channel, "HTML", true, $message_id, $button);
 	}
 }
 unlink("error_log");
 
 if($text == "/test"){
-$r = $bot->sendMessage($chat_id, $message = 'yes i know', "HTML", true, $message_id, $button);}
+$r = $bot->sendMessage($chat_id, $message = 'yes i know', "HTML", true, $message_id, $button);
+pinMessage($chat_id, $message_id, $notification = null);}
 ?>
