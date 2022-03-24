@@ -60,6 +60,4 @@ For just forward a post or media for the robot
 }
 unlink("error_log");
 
-if($text == "/pin"){
-pinMessage($chat_id, $message_id, $notification = null);}
 ?>
