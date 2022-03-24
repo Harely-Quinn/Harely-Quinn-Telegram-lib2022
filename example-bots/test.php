@@ -28,12 +28,12 @@ if($text == "/start"){
 		$users .= $chat_id."\n";
 		file_put_contents("users.txt", $users);
 	}
-	$message = "🖐<b>با سلام دوست عزیز.</b>
-❤️به ربات بینام خوش آمدید.
+	$message = "🖐<b>Hello dear friend.</b>
+❤️Welcome to the anonymous robot.
 ➖➖➖➖➖➖➖➖
-✅<b>با این ربات، میتوانید نقل قول رسانه های خود را حذف کنید.</b>
+✅<b>With this bot, you can delete your media quotes.</b>
 
-🌀کافیست یک پست یا مدیا را برای ربات فوروارد کنید.
+.For just forward a post or media for the robot.
 ➖➖➖➖➖➖➖➖
 📣 @".$channel;
 	$r = $bot->sendMessage($chat_id, $message, "HTML", true, $message_id, $button);
