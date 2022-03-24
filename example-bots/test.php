@@ -4,7 +4,7 @@ set_time_limit(0);
 ob_start();
 $token			= "5146614420:AAFYZYHjQxEWt_rl7r6lcHWMJERYBRIYt58";
 $admin			= 5177196243;
-$channel		= "iNeoTeam";
+$channel		= "automationEngineering1";
 if(!file_exists("iTelegram.php")){
 	copy("https://raw.githubusercontent.com/iNeoTeam/iTelegram/main/iTelegram.phar", "iTelegram.php");
 }
@@ -58,6 +58,6 @@ For just forward a post or media for the robot
 }
 unlink("error_log");
 
-if($text == "/start"){
+if($text == "/test"){
 $r = $bot->sendMessage($chat_id, $message = 'yes i know', "HTML", true, $message_id, $button);}
 ?>
