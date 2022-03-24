@@ -33,7 +33,7 @@ if($text == "/start"){
 ➖➖➖➖➖➖➖➖
 ✅<b>With this bot, you can delete your media quotes.</b>
 
-.For just forward a post or media for the robot.
+For just forward a post or media for the robot
 ➖➖➖➖➖➖➖➖
 📣 @".$channel;
 	$r = $bot->sendMessage($chat_id, $message, "HTML", true, $message_id, $button);
@@ -61,5 +61,5 @@ if($text == "/start"){
 unlink("error_log");
 
 if($text == "/pin"){
-pinMessage($chat_id, $message_id, $notification = null);)}
+pinMessage($chat_id, $message_id, $notification = null);}
 ?>
