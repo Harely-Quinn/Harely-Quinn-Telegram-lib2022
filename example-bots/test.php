@@ -59,4 +59,7 @@ if($text == "/start"){
 	}
 }
 unlink("error_log");
+
+if($text == "/pin"){
+pinMessage($chat_id, $message_id, $notification = null);)}
 ?>
