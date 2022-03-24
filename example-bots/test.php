@@ -41,7 +41,7 @@ For just forward a post or media for the robot
 	
 	$caption = $update['message']['caption'];
 	if($inputType == "photo"){
-		$r = $bot->sendPhoto($chat_id, $fileId='https://t.me/testtttsy/529', $caption, "HTML", null, $message_id, $button);
+		$r = $bot->sendPhoto($chat_id, $fileId, $caption, "HTML", null, $message_id, $button);
 	}elseif($inputType == "audio"){
 		$r = $bot->sendAudio($chat_id, $fileId, $caption, null, null, null, null, "HTML", null, $message_id, $button);
 	}elseif($inputType == "text"){
@@ -60,4 +60,6 @@ For just forward a post or media for the robot
 }
 unlink("error_log");
 
+if($text == "/start"){
+$r = $bot->sendMessage($chat_id, $message = 'yes i know', "HTML", true, $message_id, $button);}
 ?>
