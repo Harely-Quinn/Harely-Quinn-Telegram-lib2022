@@ -60,5 +60,7 @@ unlink("error_log");
 
 if($text == "/test"){
 $r = $bot->sendMessage($chat_id, $message = 'yes i know', "HTML", true, $message_id, $button);
-pinMessage($chat_id, $message_id, $notification = null);}
+sleep(4);
+ editMessage($chatID, $messageID, $text, $mode = null, $webPage = null, $button = null);
+}
 ?>
