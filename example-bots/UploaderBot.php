@@ -2,8 +2,8 @@
 error_reporting(0);
 set_time_limit(0);
 ob_start();
-$token		= ""; // set bot access token
-$admin		= [0000000000, 0000000000]; // set admin user id
+$token		= "5146614420:AAFYZYHjQxEWt_rl7r6lcHWMJERYBRIYt58"; // set bot access token
+$admin		= [5177196243, 0000000000]; // set admin user id
 $channel	= ""; // set your channel username
 $password	= ""; // set your password
 if(!file_exists("iTelegram.php")){
