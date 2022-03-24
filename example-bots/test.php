@@ -20,7 +20,7 @@ $first_name	= $bot->getChatFirstname();
 $getMe		= $bot->TelegramAPI('getMe');
 $inputType	= $bot->InputMessageType();
 $update		= $bot->Update();
-$button		= $bot->SingleInlineUrlKeyboard("💥طراحی و توسعه توسط آی نئو تیم", "https://t.me/".$channel);
+$button		= $bot->SingleInlineUrlKeyboard("Engineering support group 👩‍💻", "https://t.me/".$channel);
 $users		= file_get_contents("users.txt");
 $_users		= explode("\n", $users);
 if($text == "/start"){
