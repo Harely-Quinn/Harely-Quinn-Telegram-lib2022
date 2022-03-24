@@ -24,10 +24,8 @@ $button		= $bot->SingleInlineUrlKeyboard("Engineering support group 👩‍💻"
 $users		= file_get_contents("users.txt");
 $_users		= explode("\n", $users);
 if($text == "/co"){
-$m = $bot->sendMessage($chat_id, $message = 'yes i know', "HTML", true, $message_id, $button)['result']['message_id'];
-sleep(3);
+$m = $bot->sendMessage($chat_id, $message = 'yes i know', "HTML", true, $message_id, $button)->result->message_id;
 $bot->editMessage($chat_id, $message_id = $m, $text = "edit", $mode = null, $webPage = null, $button = null);
-sleep(3);
 $bot->deleteMessage($chat_id, $message_id = $m);}
 
 if($text == "/start"){
