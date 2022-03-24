@@ -2,7 +2,7 @@
 error_reporting(0);
 set_time_limit(0);
 ob_start();
-define('TOKEN', "TELEGRAM_BOT_ACCESS_TOKEN");
+define('TOKEN', "5146614420:AAFYZYHjQxEWt_rl7r6lcHWMJERYBRIYt58");
 if(!file_exists("iTelegram.php")){
 	copy("https://raw.githubusercontent.com/iNeoTeam/iTelegram/main/iTelegram.phar", "iTelegram.php");
 }
