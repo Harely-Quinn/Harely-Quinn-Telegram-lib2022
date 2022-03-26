@@ -26,6 +26,7 @@ $inputType	= $bot->InputMessageType();
 $update		= $bot->Update();
 $button		= $bot->SingleInlineUrlKeyboard("Engineering support group 👩‍💻", "https://t.me/".$channel);
 $key            = $bot->SingleNormalKeyboard("Hello");
+$inline_data    = $bot->InlineData();
 $users		= file_get_contents("users.txt");
 $_users		= explode("\n", $users);
 if($text == "/co"){
@@ -46,7 +47,7 @@ sleep(3);
 $bot->editMessage($chat_id, $message_id = $m, $text = "edit", $mode = null, $webPage = null, $button = $lang_btn);
 }
 
-if($data == 'lang-en'){
+if($inline_data == 'lang-en'){
 $bot->CallBackQuery($callback_id, $text = 'Hello', $alert = true);}
 
 if($text == "/start"){
