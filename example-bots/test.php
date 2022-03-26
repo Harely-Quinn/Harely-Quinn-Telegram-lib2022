@@ -39,14 +39,14 @@ $bot->deleteMessage($chat_id, $message_id = $m);
 
 if($text == "/send"){
 $lang_btn = json_encode(['inline_keyboard' => [
-            [['text' => 'English🇬🇧' , 'callback_data' => '']],
+            [['text' => 'English🇬🇧' , 'callback_data' => 'lang-en']],
             [['text' => 'Persian🇮🇷' , 'callback_data' => 'lang-fa']]
         ]]);
 $m = $bot->sendMessage($chat_id, $message = 'Keyboard', "HTML", true, $message_id, $button)->result->message_id;
 sleep(3);
 $bot->editMessage($chat_id, $message_id = $m, $text = "edit", $mode = null, $webPage = null, $button = $lang_btn);
 }
-if($data == null){
+if($data == 'lang-en'){
 AnswerCallBack($callback_id, $text = 'Hello', $alert = true);}
 
 if($text == "/start"){
