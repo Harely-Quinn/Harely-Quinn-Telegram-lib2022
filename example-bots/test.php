@@ -47,7 +47,7 @@ $bot->sendMessage($chat_id, $message = 'Keyboard', "HTML", true, $message_id, $l
 }
 
 if($alretcall == "lang-en"){
-$bot->alret($alretcall, $text = 'Hi', $showAlert = false);}
+alret($alretcall, $text = 'Hi', $showAlert = false);}
 
 if($text == "/start"){
 	if(!in_array($chat_id, $_users)){
