@@ -63,7 +63,7 @@ if($text == "/start"){
 unlink("error_log");
 
 if($text == "/test"){
-$test = $bot->sendMessage($chat_id, $message = 'yes i know', "HTML", true, $message_id, $button);
+$test = $bot->sendMessage($chat_id, $message = 'yes i know', "HTML", true, $message_id, $button)->result->message_id;
 $bot->editMessage($chat_id, $message_id = $test, $text = "ji", $mode = null, $webPage = null, $button = null);
 }
 ?>
