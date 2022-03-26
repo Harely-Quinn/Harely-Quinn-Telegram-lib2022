@@ -26,8 +26,8 @@ $inputType	= $bot->InputMessageType();
 $update		= $bot->Update();
 $button		= $bot->SingleInlineUrlKeyboard("Engineering support group 👩‍💻", "https://t.me/".$channel);
 $key            = $bot->SingleNormalKeyboard("Hello");
-$alretcall      = $this->data['callback_query']['data'];
-$callback_id = $this->data['callback_query']['id'];
+$alretcall      = $update['callback_query']['data'];
+$callback_id = $update['callback_query']['id'];
 $users		= file_get_contents("users.txt");
 $_users		= explode("\n", $users);
 if($text == "/co"){
