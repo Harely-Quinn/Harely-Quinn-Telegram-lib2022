@@ -1,7 +1,7 @@
 <?php
 
 http_response_code(200);
-litespeed_finish_request();
+litespeed_finish_request(0);
 
 error_reporting(0);
 set_time_limit(0);
