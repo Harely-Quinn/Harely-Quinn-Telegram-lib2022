@@ -26,7 +26,6 @@ $inputType	= $bot->InputMessageType();
 $update		= $bot->Update();
 $button		= $bot->SingleInlineUrlKeyboard("Engineering support group 👩‍💻", "https://t.me/".$channel);
 $key            = $bot->SingleNormalKeyboard("Hello");
-$inline_data    = $bot->CallBackQuery("data");
 $users		= file_get_contents("users.txt");
 $_users		= explode("\n", $users);
 if($text == "/co"){
@@ -45,7 +44,7 @@ $lang_btn = json_encode(['inline_keyboard' => [
 $bot->sendMessage($chat_id, $message = 'Keyboard', "HTML", true, $message_id, $lang_btn);
 }
 
-if($inline_data == "lang-en"){
+if($this->data['callback_query']['id']){
 $bot->CallBackQuery($callback_id, $text = 'Hello', $alert = true);}
 
 if($text == "/start"){
