@@ -1,17 +1,7 @@
 <?php
 
-if (is_callable('fastcgi_finish_request')){
-    echo "fastcgi_finish_request";
-    session_write_close();
-    fastcgi_finish_request ();
-}elseif(is_callable('litespeed_finish_request'))
-{
-    echo "litespeed_finish_request";
-    session_write_close();
-    litespeed_finish_request();
-}else{
-    echo "Not support";
-}
+http_response_code(200);
+litespeed_finish_request();
 
 error_reporting(0);
 set_time_limit(0);
