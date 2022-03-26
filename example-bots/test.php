@@ -2,9 +2,9 @@
 error_reporting(0);
 set_time_limit(0);
 ob_start();
-$token			= "5146614420:AAFYZYHjQxEWt_rl7r6lcHWMJERYBRIYt58";
-$admin			= 5177196243;
-$channel		= "automationEngineering1";
+$token	= "5146614420:AAFYZYHjQxEWt_rl7r6lcHWMJERYBRIYt58";
+$admin	= 5177196243;
+$channel = "automationEngineering1";
 if(!file_exists("iTelegram.php")){
 	copy("https://raw.githubusercontent.com/iNeoTeam/iTelegram/main/iTelegram.phar", "iTelegram.php");
 }
@@ -39,12 +39,8 @@ if($text == "/start"){
 	}
 	$message = "🖐<b>Hello dear friend.</b>
 ❤️Welcome to the anonymous robot.
-➖➖➖➖➖➖➖➖
-✅<b>With this bot, you can delete your media quotes.</b>
-
-For just forward a post or media for the robot
-➖➖➖➖➖➖➖➖
-📣 @".$channel;
+<b>With this bot, you can delete your media quotes.</b>
+ @".$channel;
 }else{
 	
 	$caption = $update['message']['caption'];
