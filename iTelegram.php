@@ -231,6 +231,8 @@ public function copyMessage($from , $to , $message_id , $keyboard = null, $reply
 	public function InlineLastname(){ return $this->data['callback_query']['message']['chat']['last_name']; }
 	public function InlineUserId(){ return $this->data['callback_query']['message']['chat']['id']; }
 	public function ForwarderId(){ return $this->data['message']['reply_to_message']['forward_from']['id']; }
+        public function InlineData(){ return $this->data['callback_query']['data']; }
+        
 	public function InputMessageType(){
 		if(isset($this->data['message']['text'])){ return self::TEXT; }
 		if(isset($this->data['message']['photo'])){ return self::PHOTO; }
