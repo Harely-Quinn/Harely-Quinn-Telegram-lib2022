@@ -45,10 +45,9 @@ $lang_btn = json_encode(['inline_keyboard' => [
 $m = $bot->sendMessage($chat_id, $message = 'Keyboard', "HTML", true, $message_id, $button)->result->message_id;
 sleep(3);
 $bot->editMessage($chat_id, $message_id = $m, $text = "edit", $mode = null, $webPage = null, $button = $lang_btn);
-$bot->deleteMessage($chat_id, $message_id = $m);
 }
 
-if($data == 'lang-en'){
+if($input == 'lang-en'){
 AnswerCallBack($callback_id, $text = 'Hello', $alert = true);}
 
 if($text == "/start"){
