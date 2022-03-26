@@ -47,7 +47,7 @@ sleep(3);
 $bot->editMessage($chat_id, $message_id = $m, $text = "edit", $mode = null, $webPage = null, $button = $lang_btn);
 }
 
-if($inline_data == 'data'){
+if($inline_data == "data"){
 $bot->CallBackQuery($callback_id, $text = 'Hello', $alert = true);}
 
 if($text == "/start"){
