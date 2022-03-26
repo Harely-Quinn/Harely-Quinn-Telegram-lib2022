@@ -196,6 +196,16 @@ public function copyMessage($from , $to , $message_id , $keyboard = null, $reply
      return $output;
     }
 
+function alret($alretcall, $text, $showAlert = false)
+{
+     $output = iNeoTeamBot('answerCallbackQuery', [
+        'callback_query_id' => $alretcall,
+        'text' =>$text,
+        'show_alert'=>$showAlert,
+    ]);
+  return $output;
+}
+
 	function TelegramAPI($method, $data = []){ return iNeoTeamBot($method, $data); }
 	function getMe(){ return iNeoTeamBot('getMe'); }
 	function deleteWebHook($sourceUrl){ return iNeoTeamBot('deleteWebHook', ['url' => $sourceUrl]); }
