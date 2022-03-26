@@ -10,15 +10,15 @@
 namespace iTelegram;
 error_reporting(0);
 class Bot{
-	const TEXT				= 'text';
-	const PHOTO				= 'photo';
-	const VIDEO				= 'video';
-	const DOCUMENT			= 'document';
-	const AUDIO				= 'audio';
-	const VOICE				= 'voice';
-	const CONTACT			= 'contact';
-	const LOCATION			= 'location';
-	const STICKER			= 'sticker';
+	const TEXT      = 'text';
+	const PHOTO 	= 'photo';
+	const VIDEO	= 'video';
+	const DOCUMENT	= 'document';
+	const AUDIO	= 'audio';
+	const VOICE	= 'voice';
+	const CONTACT	= 'contact';
+	const LOCATION	= 'location';
+	const STICKER	= 'sticker';
 	const CALLBACK_QUERY	= 'callback_query';
 	const INLINE_QUERY		= 'inline_query';
 	private $data			= [];
