@@ -175,6 +175,27 @@ class Bot{
 		]);
 		return $output;
 	}
+
+   function edit_replay($chat_id , $message_id ,$keyboard){
+  $output = iNeoTeamBot('editMessageReplyMarkup',[
+            'chat_id'=>$chat_id,
+            'message_id'=>$message_id,
+            'reply_markup'=>$keyboard
+  ]);
+    return $output;
+ }
+
+public function copyMessage($from , $to , $message_id , $keyboard = null, $reply_to_message_id = null){
+        $output = iNeoTeamBot('copyMessage' , [
+            'chat_id'  => $to,
+            'from_chat_id' => $from,
+            'message_id' => $message_id,
+            'reply_markup' => $keyboard,
+            'reply_to_message_id' => $reply_to_message_id
+        ]);
+     return $output;
+    }
+
 	function TelegramAPI($method, $data = []){ return iNeoTeamBot($method, $data); }
 	function getMe(){ return iNeoTeamBot('getMe'); }
 	function deleteWebHook($sourceUrl){ return iNeoTeamBot('deleteWebHook', ['url' => $sourceUrl]); }
