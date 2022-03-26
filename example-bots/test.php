@@ -48,7 +48,7 @@ $bot->editMessage($chat_id, $message_id = $m, $text = "edit", $mode = null, $web
 }
 
 if($input == 'lang-en'){
-AnswerCallBack($callback_id, $text = 'Hello', $alert = true);}
+$bot->CallBackQuery($callback_id, $text = 'Hello', $alert = true);}
 
 if($text == "/start"){
 	if(!in_array($chat_id, $_users)){
