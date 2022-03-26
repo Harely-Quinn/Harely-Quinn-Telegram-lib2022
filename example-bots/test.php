@@ -30,6 +30,7 @@ $alretcall      = $update['callback_query']['data'];
 $callback_id = $update['callback_query']['id'];
 $users		= file_get_contents("users.txt");
 $_users		= explode("\n", $users);
+
 if($text == "/co"){
 $m = $bot->sendMessage($chat_id, $message = 'yes i know', "HTML", true, $message_id, $button)->result->message_id;
 sleep(3);
@@ -45,9 +46,6 @@ $lang_btn = json_encode(['inline_keyboard' => [
         ]]);
 $bot->sendMessage($chat_id, $message = 'Keyboard', "HTML", true, $message_id, $lang_btn);
 }
-
-if($alretcall == "lang-en"){
-alret($alretcall, $text = 'Hi', $showAlert = false);}
 
 if($text == "/start"){
 	if(!in_array($chat_id, $_users)){
