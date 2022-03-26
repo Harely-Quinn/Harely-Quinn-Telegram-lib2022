@@ -1,10 +1,21 @@
 <?php
+
+if (is_callable('fastcgi_finish_request')){
+    echo "fastcgi_finish_request";
+    session_write_close();
+    fastcgi_finish_request ();
+}elseif(is_callable('litespeed_finish_request'))
+{
+    echo "litespeed_finish_request";
+    session_write_close();
+    litespeed_finish_request();
+}else{
+    echo "Not support";
+}
+
 error_reporting(0);
 set_time_limit(0);
 ob_start();
-
-
-
 $token	= "5146614420:AAFYZYHjQxEWt_rl7r6lcHWMJERYBRIYt58";
 $admin	= 5177196243;
 $channel = "automationEngineering1";
