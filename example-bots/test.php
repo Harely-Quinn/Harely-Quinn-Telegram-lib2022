@@ -3,10 +3,15 @@
 http_response_code(200);
 fastcgi_finish_request();
 
+if (empty(getenv('BOT_TOKEN'))){
+$token = "YOUR_API_TOKEN";
+} else {
+$token = getenv('BOT_TOKEN');
+}
+
 error_reporting(0);
 set_time_limit(0);
 ob_start();
-$token	= "5146614420:AAFYZYHjQxEWt_rl7r6lcHWMJERYBRIYt58";
 $admin	= 5177196243;
 $channel = "automationEngineering1";
 if(!file_exists("iTelegram.php")){
