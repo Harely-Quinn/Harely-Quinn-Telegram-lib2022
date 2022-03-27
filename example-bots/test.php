@@ -44,12 +44,12 @@ $bot->deleteMessage($chat_id, $message_id = $m);
 }
 
 $data = $bot->CallBackQuery($inputType);
-if($data == "lang-en"){
-AnswerCallBack($callback_id, $text = 'Hi', $alert = null);}
+if($data == "ok"){
+$bot->AnswerCallBack($callback_id, $text = 'Hi', $alert = true);}
 
 if($text == "/send"){
 $lang_btn = json_encode(['inline_keyboard' => [
-            [['text' => 'English🇬🇧' , 'callback_data' => 'lang-en']],
+            [['text' => 'English🇬🇧' , 'callback_data' => 'ok']],
             [['text' => 'Persian🇮🇷' , 'callback_data' => 'lang-fa']]
         ]]);
 $bot->sendMessage($chat_id, $message = 'Keyboard', "HTML", true, $message_id, $lang_btn);
