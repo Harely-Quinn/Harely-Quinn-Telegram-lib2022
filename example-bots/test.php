@@ -56,10 +56,6 @@ $bot->sendMessage($chat_id, $message = 'Keyboard', "HTML", true, $message_id, $l
 }
 
 if($text == "/start"){
-	if(!in_array($chat_id, $_users)){
-		$users .= $chat_id."\n";
-		file_put_contents("users.txt", $users);
-	}
 	$message = "🖐<b>Hello dear friend.</b>
 ❤️Welcome to the anonymous robot.
 <b>With this bot, you can delete your media quotes.</b>
