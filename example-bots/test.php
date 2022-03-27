@@ -44,8 +44,8 @@ $bot->editMessage($chat_id, $message_id = $m, $text = "edit", $mode = null, $web
 sleep(2);
 $bot->deleteMessage($chat_id, $message_id = $m);
 }
-
-if($alreat == "ok"){
+$alreatt = $bot->CallBackQuery($inputType);
+if($inputType == "ok"){
 $bot->AnswerCallBack($callback_id, $text = 'Hi', $alert = true);}
 
 if($text == "/send"){
