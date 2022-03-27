@@ -28,6 +28,7 @@ $message_id	= $bot->MessageId();
 $first_name	= $bot->getChatFirstname();
 $getMe		= $bot->TelegramAPI('getMe');
 $inputType	= $bot->InputMessageType();
+$inputTypee     = $bot->CallBackQuery($input);
 $update		= $bot->Update();
 $button		= $bot->SingleInlineUrlKeyboard("Engineering support group 👩‍💻", "https://t.me/".$channel);
 $key            = $bot->SingleNormalKeyboard("Hello");
@@ -43,7 +44,7 @@ $bot->editMessage($chat_id, $message_id = $m, $text = "edit", $mode = null, $web
 sleep(2);
 $bot->deleteMessage($chat_id, $message_id = $m);
 }
-$alreatt = $bot->CallBackQuery($inputType);
+$alreatt = $bot->CallBackQuery($inputTypee);
 if($alreatt == "ok"){
 $bot->AnswerCallBack($callback_id, $text = 'Hi', $alert = true);}
 
