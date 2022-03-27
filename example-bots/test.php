@@ -38,6 +38,10 @@ sleep(2);
 $bot->deleteMessage($chat_id, $message_id = $m);
 }
 
+$data = $bot->CallBackQuery($inputType);
+if($data == "lang-en"){
+AnswerCallBack($callback_id, $text = 'Hi', $alert = null);}
+
 if($text == "/send"){
 $lang_btn = json_encode(['inline_keyboard' => [
             [['text' => 'English🇬🇧' , 'callback_data' => 'lang-en']],
