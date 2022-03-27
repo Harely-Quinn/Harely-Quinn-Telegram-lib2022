@@ -31,7 +31,8 @@ $inputType	= $bot->InputMessageType();
 $update		= $bot->Update();
 $button		= $bot->SingleInlineUrlKeyboard("Engineering support group 👩‍💻", "https://t.me/".$channel);
 $key            = $bot->SingleNormalKeyboard("Hello");
-
+$alretcall = $this->data['callback_query']['id'];
+$alreat = $this->data['callback_query']['data'];
 $users		= file_get_contents("users.txt");
 $_users		= explode("\n", $users);
 
@@ -43,8 +44,8 @@ sleep(2);
 $bot->deleteMessage($chat_id, $message_id = $m);
 }
 
-if($inputType == "data"){
-$bot->AnswerCallBack($callback_id, $text = 'Hi', $alert = true);}
+if($alreat == "ok"){
+$bot->AnswerCallBack($alretcall, $text = 'Hi', $alert = true);}
 
 if($text == "/send"){
 $lang_btn = json_encode(['inline_keyboard' => [
