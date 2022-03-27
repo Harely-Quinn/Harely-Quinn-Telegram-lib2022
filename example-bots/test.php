@@ -43,8 +43,7 @@ sleep(2);
 $bot->deleteMessage($chat_id, $message_id = $m);
 }
 
-$data = $bot->CallBackQuery($inputType);
-if($data == "ok"){
+if($inputType == "data"){
 $bot->AnswerCallBack($callback_id, $text = 'Hi', $alert = true);}
 
 if($text == "/send"){
