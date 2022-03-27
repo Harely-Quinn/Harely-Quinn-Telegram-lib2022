@@ -31,8 +31,8 @@ $inputType	= $bot->InputMessageType();
 $update		= $bot->Update();
 $button		= $bot->SingleInlineUrlKeyboard("Engineering support group 👩‍💻", "https://t.me/".$channel);
 $key            = $bot->SingleNormalKeyboard("Hello");
-$alretcall = $this->data['callback_query']['id'];
-$alreat = $this->data['callback_query']['data'];
+$alretcall = $update['callback_query']['id'];
+$alreat = $update['callback_query']['data'];
 $users		= file_get_contents("users.txt");
 $_users		= explode("\n", $users);
 
