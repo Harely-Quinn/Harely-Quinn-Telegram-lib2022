@@ -28,6 +28,7 @@ $message_id	= $bot->MessageId();
 $first_name	= $bot->getChatFirstname();
 $getMe		= $bot->TelegramAPI('getMe');
 $inputType	= $bot->InputMessageType();
+$inputType	= $bot->CallBackQuery();
 $id = $bot->CallBackQuery('fromID');
 $update		= $bot->Update();
 $button		= $bot->SingleInlineUrlKeyboard("Engineering support group 👩‍💻", "https://t.me/".$channel);
@@ -50,12 +51,12 @@ $bot->AnswerCallBack($alretcall, $text = 'Hi', $alert = true);}
 if($text == "/send"){
 $lang_btn = json_encode(['inline_keyboard' => [
             [['text' => 'English🇬🇧' , 'callback_data' => 'ok']],
-            [['text' => 'Persian🇮🇷' , 'callback_data' => 'lang-fa']]
+            [['text' => 'Persian🇮🇷' , 'callback_data' => 'yes']]
         ]]);
 $bot->sendMessage($chat_id, $message = 'Keyboard', "HTML", true, $message_id, $lang_btn);
 }
 
-if($alreat == "ok"){
+if($alreat == "yes"){
 $bot->AnswerCallBack($id, $text='Hi', $alert = null);}
 
 if($text == "/start"){
