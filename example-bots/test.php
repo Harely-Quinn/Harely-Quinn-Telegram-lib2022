@@ -45,7 +45,7 @@ sleep(2);
 $bot->deleteMessage($chat_id, $message_id = $m);
 }
 if($inputTypee == "ok"){
-$bot->AnswerCallBack($id, $text = 'Hi', $alert = true);}
+$bot->AnswerCallBack($alretcall, $text = 'Hi', $alert = true);}
 
 if($text == "/send"){
 $lang_btn = json_encode(['inline_keyboard' => [
