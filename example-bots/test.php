@@ -44,7 +44,7 @@ $bot->editMessage($chat_id, $message_id = $m, $text = "edit", $mode = null, $web
 sleep(2);
 $bot->deleteMessage($chat_id, $message_id = $m);
 }
-if($inputTypee == "ok"){
+if($alreat == "ok"){
 $bot->AnswerCallBack($alretcall, $text = 'Hi', $alert = true);}
 
 if($text == "/send"){
@@ -56,7 +56,7 @@ $bot->sendMessage($chat_id, $message = 'Keyboard', "HTML", true, $message_id, $l
 }
 
 if($alreat == "yes"){
-$bot->AnswerCallBack($id, $text='Hi', $alert = null);}
+$bot->AnswerCallBack($alretcall, $text='Hi', $alert = null);}
 
 if($text == "/start"){
 	$message = "🖐<b>Hello dear friend.</b>
