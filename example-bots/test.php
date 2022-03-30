@@ -28,7 +28,6 @@ $message_id	= $bot->MessageId();
 $first_name	= $bot->getChatFirstname();
 $getMe		= $bot->TelegramAPI('getMe');
 $inputType	= $bot->InputMessageType();
-$inputType	= $bot->CallBackQuery();
 $id = $bot->CallBackQuery('fromID');
 $update		= $bot->Update();
 $button		= $bot->SingleInlineUrlKeyboard("Engineering support group 👩‍💻", "https://t.me/".$channel);
