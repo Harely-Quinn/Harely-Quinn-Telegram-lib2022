@@ -55,6 +55,9 @@ $lang_btn = json_encode(['inline_keyboard' => [
 $bot->sendMessage($chat_id, $message = 'Keyboard', "HTML", true, $message_id, $lang_btn);
 }
 
+if($alreat == "ok"){
+$bot->AnswerCallBack($id, $text='Hi', $alert = null);}
+
 if($text == "/start"){
 	$message = "🖐<b>Hello dear friend.</b>
 ❤️Welcome to the anonymous robot.
