@@ -90,7 +90,7 @@ $bot->editMessage($chat_id, $message_id = $test, $text = "ji", $mode = null, $we
 }
 
 if($text == "/check"){
-$get = $bot->('getChatMember', array('chat_id' => $chat_id, 'user_id' => $user_id));
+$get = $bot->getChatMember($chat_id, $user_id);
 $json = json_decode($get, true);
 if($json == 'creator' || $json == 'administrator'){
 $bot->sendMessage($chat_id, $message = 'Admin', "HTML", true, $message_id, $button);}}
