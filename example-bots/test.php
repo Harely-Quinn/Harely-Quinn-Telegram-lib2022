@@ -24,6 +24,7 @@ $bot		= new Bot();
 $bot->Authentification(API_KEY);
 $text		= $bot->Text();
 $chat_id	= $bot->getChatId();
+$user_id        = $bot->UserId();
 $message_id	= $bot->MessageId();
 $first_name	= $bot->getChatFirstname();
 $getMe		= $bot->TelegramAPI('getMe');
