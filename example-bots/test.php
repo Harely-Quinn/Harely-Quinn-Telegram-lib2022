@@ -91,8 +91,11 @@ $bot->editMessage($chat_id, $message_id = $test, $text = "ji", $mode = null, $we
 }
 
 if($text == "/check"){
-$get = $bot->getChatMember($chat_id, $user_id);
-$json = json_decode($get, true);
-if($json == 'creator' || $json == 'administrator'){
+$gett = $bot->('getChatMember', [
+'chat_id' => $chat_id,
+'user_id' => $user_id,
+]);
+$get = $gett->result->status;
+if($get == "administrator" or $get == "creator"){
 $bot->sendMessage($chat_id, "*Please wait ...*", "MarkDown", true);}}
 ?>
