@@ -94,6 +94,5 @@ if($text == "/check"){
 $get = $bot->getChatMember($chat_id, $user_id);
 $json = json_decode($get, true);
 if($json == 'creator' || $json == 'administrator'){
-$bot->sendMessage($chat_id, $message = 'Admin', $message_id, $button = null);}}
-
+$bot->sendMessage($chat_id, "*Please wait ...*", "MarkDown", true);}}
 ?>
