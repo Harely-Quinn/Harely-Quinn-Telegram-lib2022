@@ -90,7 +90,7 @@ $bot->editMessage($chat_id, $message_id = $test, $text = "ji", $mode = null, $we
 }
 
 if($text == "/check"){
-$check = $bot->getChatMember($chat_id, $user_id)
+$check = $bot->getChatMember($chat_id, $user_id);
 if($check->result->status == 'creator' || $check -> result -> status == 'administrator'){
 $bot->sendMessage($chat_id, $message = 'yes i know', "HTML", true, $message_id, $button);}}
 }
